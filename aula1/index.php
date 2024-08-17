@@ -7,29 +7,16 @@
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-    <title>Formularios</title>
+    <title>Aula 1 PHP</title>
 </head>
 <body>
     
-
-    <form action="">
-        <div class="d-flex flex-row">
-            <div class="content p-2">
-                <label for="firstName" class="form-label">First Name</label>
-                <input type="text" class="form-control p-2" placeholder="Mark">
-            </div>
-            
-            <div class="content p-2">
-                <label for="" class="form-label">Last Name</label>
-                <input type="text" class="form-control p-2" placeholder="Otto">
-            </div>
-
-            <div class="content p-2">
-
-            </div>
-        </div>
+    <h1>hoje é dia <?php echo date('d/m/Y'); ?></h1>
+   
+    <form action="resposta.php" method="POST">
+        <input type="text" name="valor" class="form-control">
+        <button type="submit" class="btn btn-primary">Enviar</button>
     </form>
-
 
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
