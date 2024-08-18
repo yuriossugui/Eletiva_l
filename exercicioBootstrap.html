@@ -11,9 +11,10 @@
 </head>
 <body>
     
-
+<div class="d-flex justify-content-center mt-5">
     <form action="">
-        <div class="d-flex flex-row">
+        <h3>Formulário 1</h3>
+        <div class="d-flex flex-row mb-3">
             <div class="content p-2">
                 <label for="firstName" class="form-label">First Name</label>
                 <input type="text" class="form-control p-2" placeholder="Mark">
@@ -23,12 +24,66 @@
                 <label for="" class="form-label">Last Name</label>
                 <input type="text" class="form-control p-2" placeholder="Otto">
             </div>
+    
+            <div class="content p-2">
+                <label for="" class="form-label">Username</label>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">@</span>
+                    <input type="text" class="form-control p-2" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+            </div>
+        </div>
+    
+        <div class="d-flex flex-row">
+            <div class="content p-2">
+                <label for="" class="form-label">City</label>
+                <input type="text" class="form-control p-2" placeholder="City">
+            </div>
+            
+            <div class="content p-2">
+                <label for="" class="form-label">State</label>
+                <input type="text" class="form-control p-2" placeholder="State">
+            </div>
+    
+            <div class="content p-2">
+                <label for="" class="form-label">Zip</label>
+                <input type="text" class="form-control p-2" placeholder="Zip">
+            </div>
+        </div>
+    
+        <input type="checkbox" name="agree_to_terms_and_conditions" value="Agree to terms and conditions">
+        <label for="vehicle1" class="mb-3"> Agree to terms and conditions</label><br>
+    
+        <button type="submit" class="btn btn-primary">Submit form</button>
+    </form>
+</div>
+
+<div class="d-flex justify-content-center mt-5">
+    <form action="">
+        <h3>Formulário 2</h3>
+        <div class="d-flex flex-row">
+            <div class="content p-2">
+                <label for="" class="form-label">Código</label>
+                <input class="form-control p-2 text-center" type="text" placeholder="32" aria-label="Disabled input example" disabled style="width:45px;">
+            </div>
 
             <div class="content p-2">
+                <label for="" class="form-label">Nome</label>
+                <input type="text" class="form-control p-2" placeholder="Nome completo do cliente">
+            </div>
 
+            <div class="content p-2">
+                <label for="" class="form-label">E-mail</label>
+                <input type="text" class="form-control p-2" placeholder="cliente@dominio.com">
+            </div>
+
+            <div class="content p-2">
+                <label for="" class="form-label">CPF</label>
+                <input type="text" class="form-control p-2" placeholder="Só números">
             </div>
         </div>
     </form>
+</div>
 
 
     <!-- Bootstrap -->
