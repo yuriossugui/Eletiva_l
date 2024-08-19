@@ -10,53 +10,58 @@
     <title>Formularios</title>
 </head>
 <body>
-    
-<div class="d-flex justify-content-center mt-5">
-    <form action="">
-        <h3>Formulário 1</h3>
-        <div class="d-flex flex-row mb-3">
-            <div class="content p-2">
-                <label for="firstName" class="form-label">First Name</label>
-                <input type="text" class="form-control p-2" placeholder="Mark">
-            </div>
-            
-            <div class="content p-2">
-                <label for="" class="form-label">Last Name</label>
-                <input type="text" class="form-control p-2" placeholder="Otto">
-            </div>
-    
-            <div class="content p-2">
-                <label for="" class="form-label">Username</label>
-                <div class="input-group mb-3">
-                    <span class="input-group-text" id="basic-addon1">@</span>
-                    <input type="text" class="form-control p-2" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+
+    <div class="d-flex justify-content-center align-items-center">
+        <form action="">
+            <h3 class="text-center">Formulário 1</h3>
+            <div class="d-flex justify-content-between mb-3">
+                <div class="content p-2">
+                    <label for="firstName" class="form-label">First Name</label>
+                    <input type="text" class="form-control p-2" placeholder="Mark">
+                </div>
+                
+                <div class="content p-2">
+                    <label for="" class="form-label">Last Name</label>
+                    <input type="text" class="form-control p-2" placeholder="Otto">
+                </div>
+        
+                <div class="content p-2">
+                    <label for="" class="form-label">Username</label>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">@</span>
+                        <input type="text" class="form-control p-2" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
                 </div>
             </div>
-        </div>
-    
-        <div class="d-flex flex-row">
-            <div class="content p-2">
-                <label for="" class="form-label">City</label>
-                <input type="text" class="form-control p-2" placeholder="City">
+        
+            <div class="d-flex justify-content-between">
+                <div class="content p-2">
+                    <label for="" class="form-label">City</label>
+                    <input type="text" class="form-control p-2" placeholder="City">
+                </div>
+                
+                <div class="content p-2">
+                    <label for="" class="form-label">State</label>
+                    <input type="text" class="form-control p-2" placeholder="State">
+                </div>
+        
+                <div class="content p-2">
+                    <label for="" class="form-label">Zip</label>
+                    <input type="text" class="form-control p-2" placeholder="Zip">
+                </div>
             </div>
-            
-            <div class="content p-2">
-                <label for="" class="form-label">State</label>
-                <input type="text" class="form-control p-2" placeholder="State">
+            <div class="d-flex flex-row mb-2">
+                <input type="checkbox" name="agree_to_terms_and_conditions" value="Agree to terms and conditions">
+                <label for="vehicle1" class="ms-2"> Agree to terms and conditions</label>
             </div>
-    
-            <div class="content p-2">
-                <label for="" class="form-label">Zip</label>
-                <input type="text" class="form-control p-2" placeholder="Zip">
+
+            <div class="d-flex flex-row">
+                <button type="submit" class="btn btn-primary">Submit form</button>
             </div>
-        </div>
+
+        </form>
+    </div>
     
-        <input type="checkbox" name="agree_to_terms_and_conditions" value="Agree to terms and conditions">
-        <label for="vehicle1" class="mb-3"> Agree to terms and conditions</label><br>
-    
-        <button type="submit" class="btn btn-primary">Submit form</button>
-    </form>
-</div>
 
 <div class="d-flex justify-content-center mt-5">
     <form action="">
@@ -69,7 +74,7 @@
 
             <div class="content p-2">
                 <label for="" class="form-label">Nome</label>
-                <input type="text" class="form-control p-2" placeholder="Nome completo do cliente">
+                <input type="text" class="form-control p-2" placeholder="Nome completo do cliente" style="width: 20vw;">
             </div>
 
             <div class="content p-2">
@@ -81,6 +86,64 @@
                 <label for="" class="form-label">CPF</label>
                 <input type="text" class="form-control p-2" placeholder="Só números">
             </div>
+        </div>
+
+        <div class="d-flex flex-row">
+            <div class="content p-2">
+                <label for="" class="form-label">Nº Celular</label>
+                <input type="text" class="form-control p-2" placeholder="Nº Do Celular">
+            </div>
+
+            <div class="content p-2">
+                <label for="" class="form-label">Nº do Telefone fixo</label>
+                <input type="text" class="form-control p-2" placeholder="Nº Do telefone">
+            </div>
+
+            <div class="content p-2">
+                <label for="" class="form-label">CEP</label>
+                <input type="text" class="form-control p-2" placeholder="ex:88308070">
+            </div>
+
+            <div class="content p-2">
+                <label for="" class="form-label">Logradouro</label>
+                <input type="text" class="form-control p-2" placeholder="ex:Rua 1400">
+            </div>
+
+            <div class="content p-2">
+                <label for="" class="form-label">Nº</label>
+                <input class="form-control p-2 text-center" type="text" placeholder="Nº" aria-label="Disabled input example" disabled style="width:45px;">
+            </div>
+
+            <div class="content p-2">
+                <label for="" class="form-label">Bairro</label>
+                <input type="text" class="form-control p-2" placeholder="Bairro">
+            </div>
+        </div>
+
+        <div class="d-flex flex-row">
+            <div class="content p-2">
+                <label for="" class="form-label">Cidade</label>
+                <input type="text" class="form-control p-2" placeholder="Cidade">
+            </div>
+
+            <div class="content p-2">
+                <label for="" class="form-label">UF</label>
+                <input class="form-control p-2 text-center" type="text" placeholder="UF" aria-label="Disabled input example" disabled style="width:45px;">
+            </div>
+
+            <div class="content p-2">
+                <label for="" class="form-label">Status</label>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Selecione</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+            </div>
+        </div>
+        <div class="d-flex flex-row-reverse">
+            <button type="submit" class="btn btn-success">Próximo</button>
+            <button class="btn btn-danger" style="margin-right:5px ;">Resetar</button>
         </div>
     </form>
 </div>
