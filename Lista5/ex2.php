@@ -2,7 +2,6 @@
 
 var_dump($_GET['nota']);
 
-
 function calcularMediaAritmetica(array $numeros) {
     if (count($numeros) === 0) {
         return 0;
@@ -20,28 +19,31 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
             $alunosEMedia = [];
 
             for ($i = 0; $i < count($_GET['aluno']); $i++) {
-                $aluno = $_GET['aluno'][$i]; 
-                $notas = $_GET['nota'][$i];  
-    
+                $aluno = $_GET['aluno'][$i];
+                $notas = $_GET['nota'][$i];
+
                 if (is_array($notas)) {
                     $alunosEMedia[$aluno] = calcularMediaAritmetica($notas);
-
-                    echo '<h1>';
-                    print_r($alunosEMedia);
-                    echo '</h1>';
-
                 } else {
                     $alunosEMedia[$aluno] = 0; 
                 }
             }
+
+            arsort($alunosEMedia);
+
+            echo '<h1>Lista de Alunos e Médias</h1>';
+            echo '<ul>';
+            foreach ($alunosEMedia as $aluno => $media) {
+                echo '<li>' . htmlspecialchars($aluno) . ': ' . number_format($media, 2) . '</li>';
+            }
+            echo '</ul>';
         }
     } catch (Exception $e) {
         echo $e->getMessage();
     }
-
-
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
