@@ -1,35 +1,46 @@
 <?php
 
+var_dump($_GET['nota']);
+
+
 function calcularMediaAritmetica(array $numeros) {
     if (count($numeros) === 0) {
         return 0;
     }
-    
+
     $soma = array_sum($numeros);
-    
     $media = $soma / count($numeros);
-    
+
     return $media;
 }
 
-    if($_SERVER['REQUEST_METHOD'] == 'GET'){
-        try{
+if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+    try {
+        if (isset($_GET['aluno']) && isset($_GET['nota'])) {
+            $alunosEMedia = [];
 
-            if(isset($_GET['aluno']) && isset($_GET['nota'])){
+            for ($i = 0; $i < count($_GET['aluno']); $i++) {
+                $aluno = $_GET['aluno'][$i]; 
+                $notas = $_GET['nota'][$i];  
+    
+                if (is_array($notas)) {
+                    $alunosEMedia[$aluno] = calcularMediaAritmetica($notas);
 
-                $alunosEMedia = [];
+                    echo '<h1>';
+                    print_r($alunosEMedia);
+                    echo '</h1>';
 
-                for($i = 0; $i < count($_GET['aluno']); $i++){
-                    $alunosEMedia[$nome]
+                } else {
+                    $alunosEMedia[$aluno] = 0; 
                 }
-
             }
-
-        }catch(Exception $e){
-            $e->getMessage();
         }
+    } catch (Exception $e) {
+        echo $e->getMessage();
     }
 
+
+}
 ?>
 
 <!DOCTYPE html>
@@ -46,7 +57,7 @@ function calcularMediaAritmetica(array $numeros) {
     <div class='d-flex justify-content-center'>
         <div class='card p-2' style='width:fit-content'>
             <form action="" method="get">
-                <?php for($i = 0; $i < 5; $i++){ ?>
+                <?php for($i = 0; $i < 3; $i++){ ?>
         
                     <label for="nome">Nome</label>
                     <input type="text" class='form-control' name='aluno[]'>
